@@ -24,8 +24,8 @@ app.get('/shopping-list', (req, res) => {
   res.json(ShoppingList.get());
 });
 
-Recipes.create('awesome recipe', 'carrots, broccoli, kale, pommegranate, orange, apple, other cool stuff');
-Recipes.create('Another awesome recipe', 'carrots, broccoli, kale, pommegranate, orange, apple, other cool stuff');
+Recipes.create('awesome recipe', ['carrots', 'broccoli', 'kale', 'pommegranate', 'orange', 'apple', 'other cool stuff']);
+Recipes.create('Another awesome recipe', ['carrots', 'broccoli', 'kale', 'pommegranate', 'orange', 'apple', 'other cool stuff']);
 
 app.get('/recipes', (req, res) => 
 	res.json(Recipes.get())
